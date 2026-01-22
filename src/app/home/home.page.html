@@ -1,20 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <app-molecule-search-bar (searchEvent)="onSearch($event)" (locationEvent)="loadCurrentLocationWeather()">
+    </app-molecule-search-bar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="main-content">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <app-organism-current-weather [weather]="currentWeather">
+  </app-organism-current-weather>
+
+  <!-- Hourly for Today (Horizontal Scroll) -->
+  <div class="hourly-container" *ngIf="todayHourly.length > 0">
+    <ion-label class="section-title">{{ 'TODAY' | translate }} (3h)</ion-label>
+    <div class="hourly-scroll">
+      <div *ngFor="let item of todayHourly" class="hourly-item">
+        <span>{{ item.dt_txt | date:'HH:mm' }}</span>
+        <img [src]="'https://openweathermap.org/img/wn/' + item.weather[0].icon + '.png'" alt="icon">
+        <span>{{ item.main.temp | number:'1.0-0' }}°</span>
+      </div>
+    </div>
   </div>
+
+  <app-organism-forecast-list [forecastItems]="dailyForecast">
+  </app-organism-forecast-list>
 </ion-content>
