@@ -1,0 +1,11 @@
+<div class="forecast-container" *ngIf="forecastItems.length > 0">
+  <ion-list-header>
+    <ion-label color="light">{{ 'NEXT_DAYS' | translate }}</ion-label>
+  </ion-list-header>
+
+  <ion-list lines="none">
+    <app-molecule-weather-card *ngFor="let item of forecastItems" [date]="item.date" [tempMax]="item.temp_max"
+      [tempMin]="item.temp_min" [icon]="item.icon" [description]="item.description">
+    </app-molecule-weather-card>
+  </ion-list>
+</div>

@@ -1,0 +1,44 @@
+<ion-card *ngIf="weather" class="weather-card">
+  <div class="weather-header">
+    <div class="location-info">
+      <ion-card-title>{{ weather.name }}, {{ weather.sys.country }}</ion-card-title>
+      <ion-card-subtitle>{{ 'TODAY' | translate }}</ion-card-subtitle>
+    </div>
+    <div class="temp-icon">
+      <img [src]="weatherIcon" alt="weather icon">
+    </div>
+  </div>
+
+  <ion-card-content>
+    <div class="main-temp">
+      <h1>{{ weather.main.temp | number:'1.0-0' }}°</h1>
+      <p>{{ weather.weather[0].description | titlecase }}</p>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="detail-item">
+            <ion-icon name="water"></ion-icon>
+            <span>{{ weather.main.humidity }}%</span>
+            <small>{{ 'HUMIDITY' | translate }}</small>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="detail-item">
+            <ion-icon name="thermometer"></ion-icon>
+            <span>{{ weather.main.pressure }} hPa</span>
+            <small>{{ 'PRESSURE' | translate }}</small>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="detail-item">
+            <ion-icon name="warning"></ion-icon>
+            <span>{{ weather.wind.speed }} m/s</span>
+            <small>{{ 'WIND' | translate }}</small>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

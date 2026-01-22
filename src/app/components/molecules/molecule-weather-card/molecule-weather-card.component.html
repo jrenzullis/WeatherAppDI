@@ -1,0 +1,16 @@
+<ion-item lines="none" class="forecast-item">
+  <div slot="start" class="date-col">
+    <ion-text color="light">
+      <h3>{{ date | date:'EEE dd' }}</h3>
+    </ion-text>
+  </div>
+
+  <div class="icon-col">
+    <img [src]="iconUrl" alt="icon" width="40">
+  </div>
+
+  <div slot="end" class="temp-col">
+    <ion-note color="light">{{ tempMax | number:'1.0-0' }}°</ion-note>
+    <ion-note color="medium" class="min-temp">{{ tempMin | number:'1.0-0' }}°</ion-note>
+  </div>
+</ion-item>

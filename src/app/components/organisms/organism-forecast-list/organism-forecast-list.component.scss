@@ -1,0 +1,19 @@
+.forecast-container {
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+ion-list {
+    background: transparent;
+    padding: 0;
+}
+
+ion-list-header {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,26 @@
+.forecast-item {
+    --background: transparent;
+    --color: white;
+    margin-bottom: 8px;
+}
+
+.date-col {
+    width: 60px;
+}
+
+.icon-col {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.temp-col {
+    display: flex;
+    gap: 10px;
+    width: 80px;
+    justify-content: flex-end;
+}
+
+.min-temp {
+    opacity: 0.6;
+}
