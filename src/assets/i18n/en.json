@@ -1,0 +1,13 @@
+{
+    "SEARCH_PLACEHOLDER": "Search city...",
+    "CURRENT_LOCATION": "Use my location",
+    "WIND": "Wind",
+    "HUMIDITY": "Humidity",
+    "UV_INDEX": "UV Index",
+    "PRESSURE": "Pressure",
+    "FEELS_LIKE": "Feels like",
+    "TODAY": "Today",
+    "NEXT_DAYS": "Next 4 days",
+    "ERROR_CITY_NOT_FOUND": "City not found",
+    "ERROR_LOCATION": "Error getting location"
+}

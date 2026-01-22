@@ -1,0 +1,13 @@
+{
+    "SEARCH_PLACEHOLDER": "Buscar ciudad...",
+    "CURRENT_LOCATION": "Usar mi ubicación",
+    "WIND": "Viento",
+    "HUMIDITY": "Humedad",
+    "UV_INDEX": "Índice UV",
+    "PRESSURE": "Presión",
+    "FEELS_LIKE": "Sensación",
+    "TODAY": "Hoy",
+    "NEXT_DAYS": "Próximos 4 días",
+    "ERROR_CITY_NOT_FOUND": "Ciudad no encontrada",
+    "ERROR_LOCATION": "Error al obtener ubicación"
+}
