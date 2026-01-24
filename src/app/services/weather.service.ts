@@ -63,9 +63,13 @@ export class WeatherService {
     private getMockForecast(): any {
         // Generate simple mock forecast
         const list = [];
+        const now = new Date();
+        // Start from next hour
+        now.setMinutes(0, 0, 0);
+
         for (let i = 0; i < 40; i++) {
-            const date = new Date();
-            date.setHours(date.getHours() + (i * 3));
+            const date = new Date(now);
+            date.setHours(now.getHours() + (i * 3));
             list.push({
                 dt: Math.floor(date.getTime() / 1000),
                 dt_txt: date.toISOString().replace('T', ' ').substring(0, 19),
@@ -74,6 +78,6 @@ export class WeatherService {
                 wind: { speed: 3 }
             });
         }
-        return { list, city: { name: 'Madrid', country: 'ES' } };
+        return { list, city: { name: 'Madrid (Mock)', country: 'ES' } };
     }
 }

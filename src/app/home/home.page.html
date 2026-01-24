@@ -15,7 +15,7 @@
 
   <!-- Hourly for Today (Horizontal Scroll) -->
   <div class="hourly-container" *ngIf="todayHourly.length > 0">
-    <ion-label class="section-title">{{ 'TODAY' | translate }} (3h)</ion-label>
+    <ion-label class="section-title">{{ 'HOURLY' | translate }} (24h)</ion-label>
     <div class="hourly-scroll">
       <div *ngFor="let item of todayHourly" class="hourly-item">
         <span>{{ item.dt_txt | date:'HH:mm' }}</span>

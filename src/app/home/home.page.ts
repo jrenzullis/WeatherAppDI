@@ -87,12 +87,8 @@ export class HomePage implements OnInit {
     const now = new Date();
     const todayStr = now.toISOString().split('T')[0];
 
-    // 1. Hourly for today (rest of the day or just first few items)
-    // Actually, "Hourly for today" implies we filter items that match today's date.
-    this.todayHourly = list.filter(item => item.dt_txt.startsWith(todayStr));
-
-    // If today is almost over, maybe show next 24h? Requirement: "En el actual se quiere la información del tiempo cada hora"
-    // I'll stick to "Today's remaining hours".
+    // 1. Hourly for today / upcoming (Show next 24h -> 8 items of 3h steps)
+    this.todayHourly = list.slice(0, 8);
 
     // 2. Daily for next 4 days
     const grouped = new Map<string, any[]>();

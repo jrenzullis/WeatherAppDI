@@ -2,6 +2,7 @@
     "SEARCH_PLACEHOLDER": "Buscar ciudad...",
     "CURRENT_LOCATION": "Usar mi ubicación",
     "WIND": "Viento",
+    "HOURLY": "Pronóstico (3h)",
     "HUMIDITY": "Humedad",
     "UV_INDEX": "Índice UV",
     "PRESSURE": "Presión",
