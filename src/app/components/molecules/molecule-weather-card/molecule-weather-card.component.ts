@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonItem, IonLabel, IonNote, IonText } from '@ionic/angular/standalone';
+import { IonItem, IonNote, IonText } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { water, thermometer, cloudy, sunny, rainy, snow, thunderstorm } from 'ionicons/icons';
 
 @Component({
   selector: 'app-molecule-weather-card',
   standalone: true,
-  imports: [CommonModule, IonItem, IonLabel, IonNote, IonIcon, IonText],
+  imports: [CommonModule, IonItem, IonNote, IonText],
   templateUrl: './molecule-weather-card.component.html',
   styleUrls: ['./molecule-weather-card.component.scss'],
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule, ToastController, LoadingController } from '@ionic/angular'; // Import IonicModule or specific components
-import { IonContent, IonHeader, IonToolbar, IonRefresher, IonRefresherContent, IonLabel, IonButtons, IonMenuButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonToolbar, IonRefresher, IonRefresherContent, IonLabel } from '@ionic/angular/standalone';
 import { TranslateModule } from '@ngx-translate/core';
 import { WeatherService } from '../services/weather.service';
 import { LocationService } from '../services/location.service';
@@ -15,7 +15,7 @@ import { WeatherResponse, ForecastResponse } from '../interfaces/weather.interfa
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [CommonModule, TranslateModule, IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonRefresher, IonRefresherContent, IonLabel,
+  imports: [CommonModule, TranslateModule, IonContent, IonHeader, IonToolbar, IonRefresher, IonRefresherContent, IonLabel,
     MoleculeSearchBarComponent, OrganismCurrentWeatherComponent, OrganismForecastListComponent],
 })
 export class HomePage implements OnInit {

@@ -1,0 +1,94 @@
+
+> weatherApp@0.0.1 build
+> ng build
+
+[33mÔØ»[39m Building...
+[32mÔ£ö[39m Building...
+Application bundle generation failed. [14.131 seconds] - 2026-01-24T18:23:24.645Z
+
+Ôû▓ [WARNING] NG8113: IonLabel is not used within the template of MoleculeWeatherCardComponent [plugin angular-compiler]
+
+    src/app/components/molecules/molecule-weather-card/molecule-weather-card.component.ts:10:35:
+      10 Ôöé   imports: [CommonModule, IonItem, IonLabel, IonNote, IonText],
+         ÔòÁ                                    ~~~~~~~~
+
+
+Ôû▓ [WARNING] The glob pattern import("./**/*.entry.js*") did not match any files [empty-glob]
+
+    node_modules/@stencil/core/internal/client/index.js:169:2:
+      169 Ôöé   `./${bundleId}.entry.js${BUILD5.hotModuleReplacement && hmrVers...
+          ÔòÁ   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'ion-button' is not a known element:
+1. If 'ion-button' is an Angular component, then verify that it is included in the '@Component.imports' of this component.
+2. If 'ion-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/molecules/molecule-search-bar/molecule-search-bar.component.html:9:2:
+      9 Ôöé   <ion-button (click)="onLocation()" fill="clear" size="default">
+        ÔòÁ   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MoleculeSearchBarComponent.
+
+    src/app/components/molecules/molecule-search-bar/molecule-search-bar.component.ts:13:15:
+      13 Ôöé   templateUrl: './molecule-search-bar.component.html',
+         ÔòÁ                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'ion-icon' is not a known element:
+1. If 'ion-icon' is an Angular component, then verify that it is included in the '@Component.imports' of this component.
+2. If 'ion-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/molecules/molecule-search-bar/molecule-search-bar.component.html:10:4:
+      10 Ôöé     <ion-icon name="location" slot="icon-only"></ion-icon>
+         ÔòÁ     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MoleculeSearchBarComponent.
+
+    src/app/components/molecules/molecule-search-bar/molecule-search-bar.component.ts:13:15:
+      13 Ôöé   templateUrl: './molecule-search-bar.component.html',
+         ÔòÁ                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG1010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value could not be determined statically. [plugin angular-compiler]
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:68:
+      12 Ôöé ...IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCar...
+         ÔòÁ                             ~~~~~~~~~~~~~
+
+  Unknown reference.
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:68:
+      12 Ôöé ...IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCar...
+         ÔòÁ                             ~~~~~~~~~~~~~
+
+
+X [ERROR] TS2304: Cannot find name 'IonCardHeader'. [plugin angular-compiler]
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:68:
+      12 Ôöé ...IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCar...
+         ÔòÁ                             ~~~~~~~~~~~~~
+
+
+X [ERROR] NG1010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value could not be determined statically. [plugin angular-compiler]
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:123:
+      12 Ôöé ...ubtitle, IonCardTitle, IonIcon, IonText, IonGrid, IonRow, IonCol],
+         ÔòÁ                                    ~~~~~~~
+
+  Unknown reference.
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:123:
+      12 Ôöé ...ubtitle, IonCardTitle, IonIcon, IonText, IonGrid, IonRow, IonCol],
+         ÔòÁ                                    ~~~~~~~
+
+
+X [ERROR] TS2304: Cannot find name 'IonText'. [plugin angular-compiler]
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:123:
+      12 Ôöé ...ubtitle, IonCardTitle, IonIcon, IonText, IonGrid, IonRow, IonCol],
+         ÔòÁ                                    ~~~~~~~
+
+

@@ -9,7 +9,7 @@ import { water, thermometer, cloudy, sunny, rainy, snow, thunderstorm, warning }
 @Component({
   selector: 'app-organism-current-weather',
   standalone: true,
-  imports: [CommonModule, TranslateModule, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon, IonText, IonGrid, IonRow, IonCol],
+  imports: [CommonModule, TranslateModule, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonGrid, IonRow, IonCol],
   templateUrl: './organism-current-weather.component.html',
   styleUrls: ['./organism-current-weather.component.scss'],
 })
