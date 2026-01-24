@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { IonSearchbar, IonItem, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonSearchbar } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { search, location } from 'ionicons/icons';
 

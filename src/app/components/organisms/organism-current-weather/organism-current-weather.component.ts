@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon, IonText, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
+import { IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 import { WeatherResponse } from '../../../interfaces/weather.interface';
 import { addIcons } from 'ionicons';
 import { water, thermometer, cloudy, sunny, rainy, snow, thunderstorm, warning } from 'ionicons/icons';

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonItem, IonLabel, IonNote, IonIcon, IonText } from '@ionic/angular/standalone';
+import { IonItem, IonLabel, IonNote, IonText } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { water, thermometer, cloudy, sunny, rainy, snow, thunderstorm } from 'ionicons/icons';
 
