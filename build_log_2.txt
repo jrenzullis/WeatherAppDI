@@ -1,0 +1,78 @@
+
+> weatherApp@0.0.1 build
+> ng build
+
+[33mÔØ»[39m Building...
+[32mÔ£ö[39m Building...
+Application bundle generation failed. [8.016 seconds] - 2026-01-24T18:01:25.646Z
+
+Ôû▓ [WARNING] NG8113: IonItem is not used within the template of MoleculeSearchBarComponent [plugin angular-compiler]
+
+    src/app/components/molecules/molecule-search-bar/molecule-search-bar.component.ts:12:70:
+      12 Ôöé ...dule, TranslateModule, IonSearchbar, IonItem, IonButton, IonIcon],
+         ÔòÁ                                         ~~~~~~~
+
+
+Ôû▓ [WARNING] NG8113: IonLabel is not used within the template of MoleculeWeatherCardComponent [plugin angular-compiler]
+
+    src/app/components/molecules/molecule-weather-card/molecule-weather-card.component.ts:10:35:
+      10 Ôöé ...rts: [CommonModule, IonItem, IonLabel, IonNote, IonIcon, IonText],
+         ÔòÁ                                 ~~~~~~~~
+
+
+Ôû▓ [WARNING] NG8113: IonIcon is not used within the template of MoleculeWeatherCardComponent [plugin angular-compiler]
+
+    src/app/components/molecules/molecule-weather-card/molecule-weather-card.component.ts:10:54:
+      10 Ôöé ...rts: [CommonModule, IonItem, IonLabel, IonNote, IonIcon, IonText],
+         ÔòÁ                                                    ~~~~~~~
+
+
+Ôû▓ [WARNING] NG8113: IonCardHeader is not used within the template of OrganismCurrentWeatherComponent [plugin angular-compiler]
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:68:
+      12 Ôöé ...IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCar...
+         ÔòÁ                             ~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] NG8113: IonText is not used within the template of OrganismCurrentWeatherComponent [plugin angular-compiler]
+
+    src/app/components/organisms/organism-current-weather/organism-current-weather.component.ts:12:123:
+      12 Ôöé ...ubtitle, IonCardTitle, IonIcon, IonText, IonGrid, IonRow, IonCol],
+         ÔòÁ                                    ~~~~~~~
+
+
+Ôû▓ [WARNING] NG8113: IonTitle is not used within the template of HomePage [plugin angular-compiler]
+
+    src/app/home/home.page.ts:18:66:
+      18 Ôöé ...ule, IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, I...
+         ÔòÁ                                ~~~~~~~~
+
+
+Ôû▓ [WARNING] NG8113: IonButtons is not used within the template of HomePage [plugin angular-compiler]
+
+    src/app/home/home.page.ts:18:88:
+      18 Ôöé ...der, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonRefres...
+         ÔòÁ                               ~~~~~~~~~~
+
+
+Ôû▓ [WARNING] NG8113: IonMenuButton is not used within the template of HomePage [plugin angular-compiler]
+
+    src/app/home/home.page.ts:18:100:
+      18 Ôöé ... IonToolbar, IonButtons, IonMenuButton, IonRefresher, IonRefres...
+         ÔòÁ                             ~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] The glob pattern import("./**/*.entry.js*") did not match any files [empty-glob]
+
+    node_modules/@stencil/core/internal/client/index.js:169:2:
+      169 Ôöé   `./${bundleId}.entry.js${BUILD5.hotModuleReplacement && hmrVers...
+          ÔòÁ   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] TS2554: Expected 0 arguments, but got 1. [plugin angular-compiler]
+
+    src/main.ts:14:33:
+      14 Ôöé   return new TranslateHttpLoader(http);
+         ÔòÁ                                  ~~~~
+
+
