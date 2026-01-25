@@ -1,10 +1,6 @@
 <div class="search-container">
-  <ion-searchbar 
-    [(ngModel)]="searchTerm" 
-    (ionChange)="onSearch()" 
-    [debounce]="1000"
-    [placeholder]="'SEARCH_PLACEHOLDER' | translate"
-    animated="true">
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchTerm = $event.detail.value || ''" (search)="onSearch()"
+    [placeholder]="'SEARCH_PLACEHOLDER' | translate" animated="true">
   </ion-searchbar>
   <ion-button (click)="onLocation()" fill="clear" size="default">
     <ion-icon name="location" slot="icon-only"></ion-icon>

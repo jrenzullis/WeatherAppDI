@@ -30,6 +30,7 @@ export class MoleculeSearchBarComponent {
   }
 
   onLocation() {
+    // alert('DEBUG: Button Clicked');
     this.locationEvent.emit();
   }
 }

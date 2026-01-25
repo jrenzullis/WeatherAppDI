@@ -35,45 +35,58 @@ export class HomePage implements OnInit {
   }
 
   async loadCurrentLocationWeather() {
-    const loading = await this.loadingCtrl.create({ message: 'Locating...' });
-    await loading.present();
+    // console.log('DEBUG: Parent received location event');
+    // alert('DEBUG: Parent received location event');
+
+    // const loading = await this.loadingCtrl.create({ message: 'Locating...' });
+    // await loading.present();
 
     try {
+      // 1. Get Coordinates (Should be instant Madrid now)
       const coords = await this.locationService.getCurrentPosition();
+      console.log('DEBUG: Coords received', coords);
+
+      // 2. Fetch Data
       await this.getWeatherData(coords.lat, coords.lon);
+
     } catch (error) {
-      this.showToast('ERROR_LOCATION');
+      console.error('CRITICAL ERROR', error);
+      alert('CRITICAL ERROR: ' + JSON.stringify(error));
     } finally {
-      loading.dismiss();
+      // loading.dismiss();
     }
   }
 
   async onSearch(city: string) {
-    const loading = await this.loadingCtrl.create({ message: 'Searching...' });
-    await loading.present();
+    // const loading = await this.loadingCtrl.create({ message: 'Searching...' });
+    // await loading.present();
 
     this.weatherService.getCoordinates(city).subscribe({
       next: async (locations) => {
         if (locations && locations.length > 0) {
-          const { lat, lon } = locations[0];
-          await this.getWeatherData(lat, lon);
-          loading.dismiss();
+          const { lat, lon, name } = locations[0];
+          await this.getWeatherData(lat, lon, name);
+          // loading.dismiss();
         } else {
-          loading.dismiss();
+          // loading.dismiss();
           this.showToast('ERROR_CITY_NOT_FOUND');
         }
       },
-      error: () => {
-        loading.dismiss();
+      error: (err) => {
+        // loading.dismiss();
+        console.error('Search Error', err);
         this.showToast('ERROR_CITY_NOT_FOUND');
       }
     });
   }
 
-  async getWeatherData(lat: number, lon: number) {
+  async getWeatherData(lat: number, lon: number, cityName?: string) {
     // Get Current Weather
     this.weatherService.getCurrentWeather(lat, lon).subscribe(data => {
       this.currentWeather = data;
+      if (this.currentWeather && cityName) {
+        this.currentWeather.name = cityName; // FORCE SEARCHED NAME
+      }
     });
 
     // Get Forecast
