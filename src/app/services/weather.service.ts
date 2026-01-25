@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, timeout } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { WeatherResponse, ForecastResponse, GeoLocationResponse } from '../interfaces/weather.interface';
 
@@ -18,6 +18,7 @@ export class WeatherService {
     getCurrentWeather(lat: number, lon: number): Observable<WeatherResponse | any> {
         return this.http.get<WeatherResponse>(`${this.apiUrl}/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}&units=metric&lang=es`)
             .pipe(
+                timeout(5000),
                 catchError(err => {
                     console.error('API Error, using mock data', err);
                     return of(this.getMockCurrentWeather());
@@ -28,6 +29,7 @@ export class WeatherService {
     getForecast(lat: number, lon: number): Observable<ForecastResponse | any> {
         return this.http.get<ForecastResponse>(`${this.apiUrl}/forecast?lat=${lat}&lon=${lon}&appid=${this.apiKey}&units=metric&lang=es`)
             .pipe(
+                timeout(5000),
                 catchError(err => {
                     console.warn('API Error, using mock forecast', err);
                     return of(this.getMockForecast());
@@ -36,8 +38,9 @@ export class WeatherService {
     }
 
     getCoordinates(city: string): Observable<GeoLocationResponse[]> {
-        return this.http.get<GeoLocationResponse[]>(`${this.geoUrl}/direct?q=${city}&limit=5&appid=${this.apiKey}`)
+        return this.http.get<GeoLocationResponse[]>(`${this.geoUrl}/direct?q=${city}&limit=1&appid=${this.apiKey}`)
             .pipe(
+                timeout(5000),
                 catchError(() => {
                     return of([{
                         name: city,
